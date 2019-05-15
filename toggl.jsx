@@ -1,6 +1,6 @@
 export const command = "sh Uberbar/scripts/toggl.sh"
 
-export const refreshFrequency = 1000
+export const refreshFrequency = 10000
 
 export const render = ( output ) => {
   return (

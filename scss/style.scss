@@ -3,7 +3,6 @@
 
 div#__uebersicht {
   background-color: var(--bg);
-  bottom: 0;
   color: var(--fg);
   font: var(--fontsize) var(--font);
   height: var(--height);
@@ -12,35 +11,53 @@ div#__uebersicht {
 
 .screen {
   width: var(--width);
+  height: var(--height);
 
   div {
-    line-height: var(--height);
     position: absolute;
   }
 }
 
-.kwmmode {
-  font-size: 26px;
-  left: 50px;
+%bar-top {
+  top: 3px;
+}
+
+%bar-bottom {
+  bottom: 3px;
 }
 
 .battery {
-  right: 280px;
+  @extend %bar-top;
+  right: 108px;
+}
+
+.chunkwm-focused {
+  @extend %bar-top;
+  left: 3px;
+}
+
+.chunkwm-monitor {
+  @extend %bar-bottom;
+  left: 3px;
 }
 
 .spotify {
-  left: 270px;
+  @extend %bar-bottom;
+  right: 3px;
 }
 
 .toggl {
-  right: 400px;
+  @extend %bar-top;
+  right: 150px;
 }
 
 .date {
-  right: 50px;
+  @extend %bar-top;
+  right: 3px;
 }
 
 .notify {
+  @extend %bar-top;
   animation: fadeIn 10000ms ease-in-out 0 forwards;
   left: 50%;
   transform: translateX(-50%);

@@ -1,17 +1,17 @@
 :root {
   --width: 100vw;
-  --height: 50px;
-  --bg: #121115;
-  --fg: #afb5b8;
+  --height: 30px;
+  --bg: #061A37;
+  --fg: #e7ebed;
   --active: foreground;
-  --notactive: #8A6C62;
-  --font: 'Ubuntu Mono', 'Inconsolata for Powerline', 'Space Mono for Powerline', 'IBM Plex Mono';
-  --fontsize: 15px;
+  --notactive: #A4B5D1;
+  --font: Optima;
+  /* 'Ubuntu Mono', 'Inconsolata for Powerline', 'Space Mono for Powerline', 'IBM Plex Mono'; */
+  --fontsize: 10px;
 }
 
 div#__uebersicht {
   background-color: var(--bg);
-  bottom: 0;
   color: var(--fg);
   font: var(--fontsize) var(--font);
   height: var(--height);
@@ -20,32 +20,43 @@ div#__uebersicht {
 
 .screen {
   width: var(--width);
+  height: var(--height);
 }
 
 .screen div {
-  line-height: var(--height);
   position: absolute;
 }
 
-.kwmmode {
-  font-size: 26px;
-  left: 50px;
+.battery, .chunkwm-focused, .toggl, .date, .notify {
+  top: 3px;
+}
+
+.chunkwm-monitor, .spotify {
+  bottom: 3px;
 }
 
 .battery {
-  right: 280px;
+  right: 108px;
+}
+
+.chunkwm-focused {
+  left: 3px;
+}
+
+.chunkwm-monitor {
+  left: 3px;
 }
 
 .spotify {
-  left: 270px;
+  right: 3px;
 }
 
 .toggl {
-  right: 400px;
+  right: 150px;
 }
 
 .date {
-  right: 50px;
+  right: 3px;
 }
 
 .notify {
