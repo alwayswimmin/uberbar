@@ -10,7 +10,7 @@
   --fontsize: 10px;
 }
 
-div#__uebersicht {
+div#uebersicht {
   background-color: var(--bg);
   color: var(--fg);
   font: var(--fontsize) var(--font);
